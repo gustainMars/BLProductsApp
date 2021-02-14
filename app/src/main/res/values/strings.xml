@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">BLProductsApp</string>
+    <string name="save">Save</string>
+    <string name="price">Price</string>
+    <string name="quantity">Quantity</string>
+    <string name="name">Name</string>
+    <string name="openSale">Open Sale</string>
+</resources>
