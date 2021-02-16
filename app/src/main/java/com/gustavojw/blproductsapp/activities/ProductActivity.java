@@ -20,7 +20,6 @@ public class ProductActivity extends AppCompatActivity {
     private EditText txtQuantity;
     private EditText txtPrice;
     private Button btnSave;
-    ProductController productController;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,7 +37,7 @@ public class ProductActivity extends AppCompatActivity {
 
     }
 
-    private void clickSaveButtonListener(){
+    private void clickSaveButtonListener() {
 
         this.btnSave.setOnClickListener(new View.OnClickListener() {
 
@@ -47,13 +46,14 @@ public class ProductActivity extends AppCompatActivity {
                 Product productToSave = getDataProductFromForm();
 
                 if (productToSave != null) {
-                    productController = new ProductController(ConnectionSQLite.getInstance(ProductActivity.this));
+                    ProductController productController = new ProductController(ConnectionSQLite.getInstance(ProductActivity.this));
                     long idProduct = productController.saveProductController(productToSave);
 
                     if (idProduct > 0)
                         Toast.makeText(ProductActivity.this, "Product successfully saved!", Toast.LENGTH_LONG).show();
                     else {
-                        Toast.makeText(ProductActivity.this, "An exception occurred while trying to save the product. Remember, all fields are required and with the appropriate data type.", Toast.LENGTH_LONG).show();
+                        Toast.makeText(ProductActivity.this, "An exception occurred while trying to save the product. " +
+                                "Remember, all fields are required and with the appropriate data type.", Toast.LENGTH_LONG).show();
                     }
 
                 } else {
@@ -88,7 +88,7 @@ public class ProductActivity extends AppCompatActivity {
         }
 
         if (!this.txtPrice.getText().toString().isEmpty()) {
-            float productPrice = Float.parseFloat(this.txtName.getText().toString());
+            float productPrice = Float.parseFloat(this.txtPrice.getText().toString());
             product.setPrice(productPrice);
         }
         else {

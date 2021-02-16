@@ -6,10 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import com.gustavojw.blproductsapp.activities.SaleActivity;
-import com.gustavojw.blproductsapp.controller.ProductController;
+import com.gustavojw.blproductsapp.activities.ProductActivity;
 import com.gustavojw.blproductsapp.dbHelper.ConnectionSQLite;
-import com.gustavojw.blproductsapp.model.Product;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -24,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void openProductActivity(View view) {
-        Intent product = new Intent(this, SaleActivity.class);
+        Intent product = new Intent(this, ProductActivity.class);
         startActivity(product);
     }
 }
