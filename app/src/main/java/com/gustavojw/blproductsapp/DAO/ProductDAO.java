@@ -21,10 +21,10 @@ public class ProductDAO {
         try{
 
             ContentValues values = new ContentValues();
-            values.put("", product.getId());
-            values.put("", product.getName());
-            values.put("", product.getStockQuantity());
-            values.put("", product.getPrice());
+            values.put("barCode", product.getbarCode());
+            values.put("name", product.getName());
+            values.put("quantityInStock", product.getStockQuantity());
+            values.put("price", product.getPrice());
 
             long insertedProductId = dataBase.insert("product", null, values);
             return insertedProductId;

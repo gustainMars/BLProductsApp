@@ -68,7 +68,7 @@ public class ProductActivity extends AppCompatActivity {
         Product product = new Product();
 
         if (!this.txtBarCode.getText().toString().isEmpty())
-            product.setId(Integer.parseInt(this.txtBarCode.getText().toString()));
+            product.setBarCode(Integer.parseInt(this.txtBarCode.getText().toString()));
         else {
             return null;
         }

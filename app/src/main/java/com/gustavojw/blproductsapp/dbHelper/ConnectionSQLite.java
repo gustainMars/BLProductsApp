@@ -26,11 +26,11 @@ public class ConnectionSQLite extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
         String sqlProductTable =
-                "CREATE TABLE product (" +
-                "id INTEGER PRIMARY KEY," +
+                "CREATE TABLE IF NOT EXISTS product (" +
+                "barCode INTEGER PRIMARY KEY," +
                 "name TEXT," +
                 "quantityInStock INTEGER," +
-                "price NUMERIC" +
+                "price REAL" +
                 ")";
 
         sqLiteDatabase.execSQL(sqlProductTable);

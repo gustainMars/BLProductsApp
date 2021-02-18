@@ -2,7 +2,7 @@ package com.gustavojw.blproductsapp.model;
 
 public class Product {
 
-    private int id;
+    private int barCode;
     private String name;
     private int stockQuantity;
     private float price;
@@ -11,12 +11,12 @@ public class Product {
 
     }
 
-    public int getId() {
-        return id;
+    public int getbarCode() {
+        return barCode;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setBarCode(int barCode) {
+        this.barCode = barCode;
     }
 
     public String getName() {
@@ -46,10 +46,10 @@ public class Product {
     @Override
     public String toString() {
         return "Product{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", stockQuantity=" + stockQuantity +
-                ", price=" + price +
+                "Bar Code =" + barCode +
+                ", Name ='" + name + '\'' +
+                ", Quantity in Stock =" + stockQuantity +
+                ", Price =" + price +
                 '}';
     }
 
