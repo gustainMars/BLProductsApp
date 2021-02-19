@@ -7,4 +7,7 @@
     <string name="openSale">Open Sale</string>
     <string name="registerProduct">Register Products</string>
     <string name="barCode">Bar Code</string>
+    <string name="realSign">R$</string>
+    <string name="stock">Stock:</string>
+    <string name="ListProduct">List Products</string>
 </resources>
